@@ -1,5 +1,7 @@
-Example:
+# Ranked Choice Vote
 
+## Example:
+```
 // include module
 var rcv = require('./lib');
 
@@ -16,3 +18,4 @@ var votes = [
 // pass in candidates (array of strings) and votes (array of arrays)
 var election = new rcv(candidates, votes);
 var results = election.getResults();
+```
