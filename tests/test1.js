@@ -1,12 +1,13 @@
 var expect = require('expect');
 
-var InstantRunoffVote = require('./../lib/index.js');
+var rcv = require('./../lib/index.js');
 var voteList1 = require('./data/voteList1.js');
 var voteList2 = require('./data/voteList2.js');
 var voteList3 = require('./data/voteList3.js');
 var voteList4 = require('./data/voteList4.js');
 var voteList5 = require('./data/voteList5.js');
 
+var candidates = ['FH', 'TD', 'HB'];
 var voteLists = [
   voteList1,
   voteList2,
@@ -21,8 +22,7 @@ voteLists.forEach((list, index) => {
 
 
 function testSuite(voteList, index) {
-  let election = new InstantRunoffVote(voteList);
-  election.setResults();
+  let election = new rcv(candidates, voteList);
   /**
    * Round loser is part of loser candidates, except for last round where there is no loser
    */

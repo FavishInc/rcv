@@ -5,12 +5,13 @@ require('./utils/Array.prototype.deepRemove.js');
 require('./utils/Array.prototype.getTally.js');
 var getRandomInt = require('./utils/getRandomInt.js');
 
-class InstantRunoffVote {
-  constructor(voteList, candidates) {
-    this.votes = voteList;
+class rcv {
+  constructor(candidates, votes) {
+    this.votes = votes;
     this.candidates = candidates;
     this.rounds = [];
     this.winner = null;
+    this.setResults();
   }
 
   hasWinner() {
@@ -176,4 +177,4 @@ class InstantRunoffVote {
   }
 }
 
-module.exports = InstantRunoffVote;
+module.exports = rcv;
