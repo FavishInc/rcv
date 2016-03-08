@@ -1,0 +1,12 @@
+/**
+ * remove candidates and votes from constructor
+ * setCandidates method
+ * addVote method
+ * candidate property on instance
+ * getResults()
+ * options for filterCandidates
+ * addCandidate
+ * candidates are optionally added by votes themselves
+ * setVotes
+ * isOpen option
+ **/
