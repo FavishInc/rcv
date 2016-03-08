@@ -112,6 +112,8 @@ class rcv {
 
   getRoundVotes(votes, candidates) {
     let tally = votes.reduce((reduction, currentValue, currentIndex) => {
+      if (!currentValue.length) { return reduction; }
+
       let match = reduction.find(o => { return o.name === currentValue[0] });
       if (match) {
         match.count.push(currentIndex);
